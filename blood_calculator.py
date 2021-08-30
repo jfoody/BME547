@@ -2,12 +2,17 @@ def interface():
 	print('Blood calculator')
 	print('make a choice')
 	print('9 - quit')
-	choice 
+	choice = int(input('Enter your choice: '))
+	print('your choice is:')
 
+	if choice==9:
+		return
 
-def HDL_driver():
-	hdl_input()
-	hdl_analysis()
-	hdl_output()
+interface()
 
-def HDL_input():
+# def HDL_driver():
+# 	hdl_input()
+# 	hdl_analysis()
+# 	hdl_output()
+
+# def HDL_input():
