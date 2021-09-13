@@ -1,7 +1,7 @@
 import pytest
 
 
-# test functionality of point_on_line.py
+# test functionality of point_on_line program
 @pytest.mark.parametrize('point_one, point_two, new_x, expected',[
     ([0, 0], [10,10], 3, 3.0)])
 def test_point_on_line(point_one, point_two, new_x, expected):
