@@ -1,6 +1,7 @@
 import pytest
 
 
+# test functionality of blood_calculator.py
 @pytest.mark.parametrize('HDL_value, expected', [
     (65, 'Normal'),
     (45, 'Borderline low'),
