@@ -8,7 +8,9 @@ def input_weight_entry():
 
 def parse_weight_input(weight_input):
     weight, units = weight_input.split(' ')
-    weight = int(weight)
+    weight = float(weight)
+    units = units.lower()   # convert all to lowercase
+    units = units.rstrip('s')   # remove 's' from end of string, strip takes start and end, lstrip is start
     if units == "lb":
         weight_kg = convert_lb_to_kg(weight)
     else:
