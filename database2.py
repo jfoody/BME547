@@ -1,6 +1,7 @@
 def create_database_entry(patient_name,id_no,age):
-	new_patient = [patient_name,id_no,age,[]]	#[] creates placeholder for patient info
-	return new_patient
+	# new_patient = [id_no,age]	#[] creates placeholder for patient info
+	patient_dict = {'name': patient_name, 'id_no': id_no, "age": age, 'tests': []}
+	return patient_dict
 
 def print_database(db):
 	locations = ['room 1','room 2','room 2','room 3']
@@ -16,7 +17,7 @@ def check_age(db,age):
 
 def get_patient(db, id_no):
 	for patient in db:
-		if patient[1] == id_no:
+		if patient["id_no"] == id_no:
 			return patient
 
 
@@ -34,7 +35,7 @@ def main():
 	test_done = ('HDL',65)
 
 	patient = get_patient(db,patient_id_tested)
-	patient[3].append(test_done)
+	patient["tests"].append(test_done)
 
 	print_database(db)
 
