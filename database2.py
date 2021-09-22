@@ -40,6 +40,7 @@ def get_patient(db, id_no):
 	# for patient in db:
 	# 	if patient["id_no"] == id_no:
 	# 		return patient
+	return patient
 
 
 def main():
@@ -56,14 +57,14 @@ def main():
 	db[x.id_no] = x
 	x = create_database_entry('david',14,34)
 	db[x.id_no] = x
-	print(db)
+	# print(db)
 
 	patient_id_tested = 24
 	test_done = ['HDL',65]
 
 	patient = get_patient(db, patient_id_tested)
 	patient.tests.append(test_done)
-	print(db)
+	print(db[24].tests)
 
 	# print_database(db)
 
