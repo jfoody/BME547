@@ -49,21 +49,21 @@ def main():
 
 	db = {}
 	x = create_database_entry("ann ables", 120, 30)
-	db[x["id_no"]] = x
+	db[x.id_no] = x
 	x = create_database_entry('bob',24,31)
-	db[x['id_no']] = x
+	db[x.id_no] = x
 	x = create_database_entry('chris',33,32)
-	db[x['id_no']] = x
+	db[x.id_no] = x
 	x = create_database_entry('david',14,34)
-	db[x['id_no']] = x
+	db[x.id_no] = x
 	print(db)
 
 	patient_id_tested = 24
 	test_done = ['HDL',65]
 
-	# patient = get_patient(db,patient_id_tested)
-	# patient["tests"] = test_done
-	# print(db)
+	patient = get_patient(db, patient_id_tested)
+	patient.tests.append(test_done)
+	print(db)
 
 	# print_database(db)
 
